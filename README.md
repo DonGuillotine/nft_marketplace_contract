@@ -30,7 +30,7 @@ This project implements a decentralized NFT (Non-Fungible Token) marketplace on 
 - Node.js (v14+ recommended)
 - npm (usually comes with Node.js)
 - An Ethereum wallet (e.g., MetaMask)
-- Sepolia testnet ETH (for deployment and testing)
+- Lisk Sepolia testnet ETH (for deployment and testing)
 
 ## Setup
 
@@ -47,7 +47,7 @@ This project implements a decentralized NFT (Non-Fungible Token) marketplace on 
 
 3. Create a `.env` file in the root directory and add your configuration:
    ```
-   SEPOLIA_URL=https://sepolia.infura.io/v3/YOUR-PROJECT-ID
+   LISK_SEPOLIA_URL=https://rpc.sepolia-api.lisk.com
    PRIVATE_KEY=your-wallet-private-key
    ETHERSCAN_API_KEY=your-etherscan-api-key
    ```
@@ -70,10 +70,10 @@ npx hardhat test
 
 ## Deployment
 
-Deploy to the Sepolia testnet:
+Deploy to the Lisk Sepolia testnet:
 
 ```
-npx hardhat run scripts/deploy.js --network sepolia
+npx hardhat run scripts/deploy.js --network lisk-sepolia
 ```
 
 Make sure to note the deployed contract address for interaction.
@@ -83,13 +83,13 @@ Make sure to note the deployed contract address for interaction.
 Use the `scripts/interact.js` script to interact with the deployed contract:
 
 ```
-npx hardhat run scripts/interact.js --network sepolia
+npx hardhat run scripts/interact.js --network lisk-sepolia
 ```
 
 This script demonstrates minting an NFT, listing it for sale, and retrieving listing details.
 
 You can also interact with the contract directly through Etherscan:
-[Verified Contract on Sepolia Etherscan](https://sepolia.etherscan.io/address/0xFaA06EeBcae68B9DEa91Ed746F873D0F1CCEA230#writeContract)
+[Verified Contract on Etherscan](https://sepolia-blockscout.lisk.com/address/0xe667B9c840Cad2556F98306D49c14D165Ba7F1D2?tab=contract)
 
 ## Contract Functions
 
